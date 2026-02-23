@@ -29,7 +29,15 @@ A solução definitiva foi a migração para o esquema **CKKS**, projetado para 
 - **Resultado:** O CKKS gerencia o "ruído" matemático e a precisão decimal de forma muito mais robusta para cálculos financeiros, garantindo o resultado exato de **5500.00**.
 - **Técnica:** Implementamos a **Relinearização**, que mantém o tamanho do dado cifrado estável após multiplicações e transformações.
 
+### Curiosidades sobre casos de uso da criptografia homomórfica
+- **Análise preditiva criptografada em serviços financeiros**
+Embora o ML ajude a criar modelos preditivos para condições que vão desde fraude em transações financeiras até resultados de investimentos, muitas vezes as regulamentações e políticas impedem as organizações de compartilhar e minerar dados confidenciais. O FHE permite a computação de dados criptografados com modelos de ML sem expor as informações.
 
+- **Privacidade em saúde e ciências biológicas**
+Apesar da eficiência da nuvem na hospedagem de cargas de trabalho para grandes estudos clínicos, os riscos de privacidade e as regulamentações da área de saúde geralmente tornam impraticável a transição dos hospitais para a nuvem. O FHE pode melhorar a aceitação de protocolos de compartilhamento de dados, aumentar o tamanho das amostras em pesquisas clínicas e acelerar o aprendizado com dados do mundo real.
+
+- **Pesquisa criptografada em varejo e serviços de bens de consumo**
+A tecnologia permite o monitoramento em larga escala de como os consumidores pesquisam e acessam informações, mas os direitos de privacidade dificultam que as organizações monetizem esses dados. O FHE possibilita obter insights sobre o comportamento do consumidor, ao mesmo tempo em que oculta as dúvidas dos usuários e protege o direito do indivíduo à privacidade.
 
 ## 🚀 Como executar
 
@@ -38,4 +46,5 @@ Recomendo usar um ambiente virtual (`python -m venv .venv`).
 
 ### Instalação
 ```bash
-pip install Pyfhel flask requests waitress numpy
+pip install Pyfhel flask requests waitress nump
+
