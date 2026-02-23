@@ -1,4 +1,5 @@
-flask>=2.3
-Pyfhel>=3.4
-requests>=2.31
-waitress
+Pyfhel==3.4.2
+flask==3.0.3
+requests==2.32.3
+waitress==3.0.0
+numpy>=1.26.0
