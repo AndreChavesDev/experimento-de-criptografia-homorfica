@@ -1,0 +1,4 @@
+flask>=2.3
+Pyfhel>=3.4
+requests>=2.31
+waitress
