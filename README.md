@@ -17,24 +17,24 @@ Diferente da criptografia comum, onde os dados precisam ser descriptografados pa
 
 ## 🛠️ Evolução do Projeto: Desafios e Soluções
 
-Durante o desenvolvimento, enfrentamos obstáculos reais que serviram como aprendizado sobre os limites dos esquemas criptográficos:
+Durante o desenvolvimento, enfrentei obstáculos reais que serviram como aprendizado sobre os limites dos esquemas criptográficos:
 
 ### 1. O Problema do BFV (Integer Overflow)
-Inicialmente, utilizamos o esquema **BFV**, focado em inteiros. 
+Inicialmente, utilizei o esquema **BFV**, focado em inteiros. 
 - **O erro:** Ao aplicar escalas para tratar centavos e multiplicar por 11 (bônus), o valor excedia o limite do "módulo" (o tamanho do balde matemático).
 - **Sintoma:** O resultado retornava valores negativos ou aleatórios (ex: `-5.03`) devido ao estouro de inteiro (*wrap-around*).
 
 ### 2. A Solução com CKKS (Ponto Flutuante)
 A solução definitiva foi a migração para o esquema **CKKS**, projetado para aritmética aproximada de números reais.
 - **Resultado:** O CKKS gerencia o "ruído" matemático e a precisão decimal de forma muito mais robusta para cálculos financeiros, garantindo o resultado exato de **5500.00**.
-- **Técnica:** Implementamos a **Relinearização**, que mantém o tamanho do dado cifrado estável após multiplicações.
+- **Técnica:** Implementamos a **Relinearização**, que mantém o tamanho do dado cifrado estável após multiplicações e transformações.
 
 
 
 ## 🚀 Como executar
 
 ### Pré-requisitos
-Recomendado usar um ambiente virtual (`python -m venv .venv`).
+Recomendo usar um ambiente virtual (`python -m venv .venv`).
 
 ### Instalação
 ```bash
